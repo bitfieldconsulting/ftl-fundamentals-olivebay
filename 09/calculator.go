@@ -9,5 +9,5 @@ func Multiply(x int, y int) int {
 }
 
 func Divide(x int, y int) int {
-	return (x / y)
+	return x / y
 }
