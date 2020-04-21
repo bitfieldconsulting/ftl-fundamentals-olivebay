@@ -1,6 +1,8 @@
 package calculator
 
-import "errors"
+import (
+	"fmt"
+)
 
 func Subtract(x int, y int) int {
 	return x - y
@@ -12,7 +14,7 @@ func Multiply(x int, y int) int {
 
 func Divide(x int, y int) (int, error) {
 	if y == 0 {
-		return 0, errors.New("division by zero")
+		return 0, fmt.Errorf("%d / %d division by zero", x, y)
 	}
 	return (x / y), nil
 }
